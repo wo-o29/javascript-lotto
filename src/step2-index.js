@@ -3,6 +3,7 @@ import generateLottoNumberSets from "./lotto/generateLottoNumberSets.js";
 import { isInRange } from "./utils/predicate.js";
 import validationLottoPrice from "./validation/validationLottoPrice.js";
 import $LottoTicket from "./components/LottoTicket/LottoTicket.js";
+import $LottoGameForm from "./components/LottoGameForm/LottoGameForm.js";
 
 const $buyLottoForm = document.querySelector(".buy-lotto-form");
 const $buyLottoInput = document.querySelector(".buy-lotto-input");
@@ -30,6 +31,7 @@ $buyLottoForm.addEventListener("submit", (event) => {
     validationLottoPrice(lottoPrice);
     const lottoNumberSets = generateLottoNumberSets(lottoPrice);
     $lottoGameBox.appendChild($LottoTicket(lottoNumberSets));
+    $lottoGameBox.appendChild($LottoGameForm());
   } catch (error) {
     alert(error.message);
   }

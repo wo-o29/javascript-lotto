@@ -97,13 +97,12 @@
 }
 
 /* lotto ticket */
-
 .lotto-ticket-box {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
-  height: 23.4375rem;
+  height: 20.25rem;
 }
 
 .lotto-ticket-list {
@@ -117,6 +116,50 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* lotto game form(winning number, bonus number) */
+.lotto-game-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0 1.7rem;
+}
+
+.lotto-game-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.winning-number-input-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lotto-game-input {
+  padding: 0.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--lotto-greyscale-3);
+  text-align: center;
+}
+
+.lotto-game-submit-button {
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 8px;
+  background: var(--lotto-primary);
+  color: var(--lotto-greyscale-1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.07813rem;
+
+  &:disabled {
+    background: var(--lotto-greyscale-4);
+    cursor: not-allowed;
+  }
 }
 
 /* footer */
