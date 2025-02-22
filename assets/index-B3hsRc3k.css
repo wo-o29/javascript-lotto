@@ -163,6 +163,10 @@ input {
   border-radius: 0.25rem;
   border: 1px solid var(--lotto-greyscale-3);
   width: 100%;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .buy-lotto-submit-button {
