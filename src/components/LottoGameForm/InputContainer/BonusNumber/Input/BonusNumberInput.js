@@ -1,7 +1,7 @@
 const $BonusNumberInput = () => {
   return createElement("input", {
     type: "text",
-    inputmode: "numeric",
+    inputMode: "numeric",
     minLength: "1",
     maxLength: "2",
     id: "bonus-number",
