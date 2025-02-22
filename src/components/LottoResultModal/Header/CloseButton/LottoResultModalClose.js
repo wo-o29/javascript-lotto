@@ -9,7 +9,7 @@ const $LottoResultModalClose = () => {
 
   $modalCloseButton.appendChild(
     createElement("img", {
-      src: "/close.svg",
+      src: "close.svg",
       alt: "모달 닫기",
     })
   );
