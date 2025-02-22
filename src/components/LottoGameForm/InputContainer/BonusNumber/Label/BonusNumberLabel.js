@@ -1,6 +1,6 @@
 const $BonusNumberLabel = () => {
   return createElement("label", {
-    for: "bonus-number",
+    htmlFor: "bonus-number",
     textContent: "보너스 번호",
   });
 };

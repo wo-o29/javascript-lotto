@@ -1,6 +1,6 @@
 const $WinningNumberLabel = () => {
   return createElement("label", {
-    for: "winning-number",
+    htmlFor: "winning-number",
     textContent: "당첨 번호",
   });
 };
