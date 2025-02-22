@@ -31,7 +31,7 @@ $buyLottoForm.addEventListener("submit", (event) => {
     validationLottoPrice(lottoPrice);
     const lottoNumberSets = generateLottoNumberSets(lottoPrice);
     $lottoGameBox.appendChild($LottoTicket(lottoNumberSets));
-    $lottoGameBox.appendChild($LottoGameForm());
+    $lottoGameBox.appendChild($LottoGameForm(lottoPrice, lottoNumberSets));
   } catch (error) {
     alert(error.message);
   }
