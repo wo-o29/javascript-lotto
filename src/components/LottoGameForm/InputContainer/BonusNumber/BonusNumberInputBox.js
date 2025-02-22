@@ -1,4 +1,4 @@
-import $BonusNumberInput from "./Input/WinningNumberInput.js";
+import $BonusNumberInput from "./Input/BonusNumberInput.js";
 import $BonusNumberLabel from "./Label/BonusNumberLabel.js";
 
 const $BonusNumberInputBox = () => {
