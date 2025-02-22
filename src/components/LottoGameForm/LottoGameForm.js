@@ -3,6 +3,7 @@ import validationBonusNumber from "../../validation/validationBonusNumber.js";
 import validationWinningNumbers from "../../validation/validationWinningNumbers.js";
 import $LottoGameInputContainer from "./InputContainer/LottoGameInputContainer.js";
 import $LottoGameSubmitButton from "./SubmitButton/LottoGameSubmitButton.js";
+import $LottoResultModal from "../LottoResultModal/LottoResultModal.js";
 
 const handleLottoGameInputsAllFilled = () => {
   const $lottoGameInputs = document.querySelectorAll(".lotto-game-input");
@@ -34,6 +35,8 @@ const handleLottoGameFormSubmit = (event, lottoPrice, lottoNumberSets) => {
       bonusNumber,
       lottoPrice
     );
+
+    $LottoResultModal(prizeResult, revenueRate);
   } catch (error) {
     alert(error.message);
   }
