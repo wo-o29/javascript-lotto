@@ -36,6 +36,12 @@ const handleBuyLottoFormSubmit = (event) => {
     const $lottoGameBox = document.querySelector(".lotto-game-box");
     $lottoGameBox.appendChild($LottoTicket(lottoNumberSets));
     $lottoGameBox.appendChild($LottoGameForm(lottoPrice, lottoNumberSets));
+
+    const $buyLottoSubmitButton = document.querySelector(
+      ".buy-lotto-submit-button"
+    );
+    $buyLottoInput.disabled = true;
+    $buyLottoSubmitButton.disabled = true;
   } catch (error) {
     alert(error.message);
   }
