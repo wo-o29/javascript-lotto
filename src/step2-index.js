@@ -2,12 +2,14 @@ import { LOTTO_RULE } from "./constants/lotto.js";
 import generateLottoNumberSets from "./lotto/generateLottoNumberSets.js";
 import { isInRange } from "./utils/predicate.js";
 import validationLottoPrice from "./validation/validationLottoPrice.js";
+import $LottoTicket from "./components/LottoTicket/LottoTicket.js";
 
 const $buyLottoForm = document.querySelector(".buy-lotto-form");
 const $buyLottoInput = document.querySelector(".buy-lotto-input");
 const $buyLottoSubmitButton = document.querySelector(
   ".buy-lotto-submit-button"
 );
+const $lottoGameBox = document.querySelector(".lotto-game-box");
 
 $buyLottoInput.addEventListener("input", () => {
   const price = Number($buyLottoInput.value);
@@ -27,6 +29,7 @@ $buyLottoForm.addEventListener("submit", (event) => {
     const lottoPrice = Number($buyLottoInput.value);
     validationLottoPrice(lottoPrice);
     const lottoNumberSets = generateLottoNumberSets(lottoPrice);
+    $lottoGameBox.appendChild($LottoTicket(lottoNumberSets));
   } catch (error) {
     alert(error.message);
   }

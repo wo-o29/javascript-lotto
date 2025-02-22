@@ -31,8 +31,8 @@
   line-height: 2.25rem;
 }
 
-/* main */
-.main {
+/* lotto-game */
+.lotto-game-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,13 +62,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.buy-lotto-label {
-  color: var(--lotto-greyscale-5);
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.03125rem;
 }
 
 .buy-lotto-input-box {
@@ -101,6 +94,29 @@
     background: var(--lotto-greyscale-4);
     cursor: not-allowed;
   }
+}
+
+/* lotto ticket */
+
+.lotto-ticket-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  height: 23.4375rem;
+}
+
+.lotto-ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.lotto-ticket-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* footer */

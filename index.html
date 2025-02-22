@@ -10,20 +10,20 @@
 
   <body>
     <div id="app">
+      <!-- header -->
       <header class="header">
         <nav class="header-nav">
           <h1><a href="/" class="header-title-link">🎱 행운의 로또</a></h1>
         </nav>
       </header>
 
-      <main class="main">
+      <main class="lotto-game-container">
         <div class="lotto-game-box">
           <h2 class="lotto-game-title">🎱 내 번호 당첨 확인 🎱</h2>
 
+          <!-- buy lotto -->
           <form class="buy-lotto-form">
-            <label for="buy-lotto" class="buy-lotto-input-label"
-              >구입할 금액을 입력해주세요.</label
-            >
+            <label for="buy-lotto">구입할 금액을 입력해주세요.</label>
             <p class="buy-lotto-input-box">
               <input
                 type="text"
@@ -32,15 +32,28 @@
                 placeholder="구입 금액(최소 금액 1,000원, 최대 금액 100,000원)"
                 minlength="4"
                 maxlength="6"
+                inputmode="numeric"
               />
               <button type="submit" class="buy-lotto-submit-button" disabled>
                 구입
               </button>
             </p>
           </form>
+
+          <!-- lotto ticket list -->
+          <!-- <div class="lotto-ticket-box">
+            <p>총 7개를 구매했습니다.</p>
+            <ul class="lotto-ticket-list">
+              <li class="lotto-ticket-item">
+                <img src="lotto-ticket.png" alt="로또 티켓 이미지" />
+                <span>12, 28, 22, 37, 19, 23</span>
+              </li>
+            </ul>
+          </div> -->
         </div>
       </main>
 
+      <!-- footer -->
       <footer class="footer">
         <p class="footer-text">Copyright 2023. woowacourse</p>
       </footer>

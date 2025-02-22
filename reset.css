@@ -52,6 +52,7 @@ html {
 }
 img,
 video {
+  vertical-align: top;
   height: auto;
   max-width: 100%;
 }
