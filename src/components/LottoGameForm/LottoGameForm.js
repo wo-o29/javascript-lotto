@@ -57,6 +57,12 @@ const $LottoGameForm = (lottoPrice, lottoNumberSets) => {
     handleLottoGameFormSubmit(event, lottoPrice, lottoNumberSets)
   );
 
+  const firstInput = $lottoGameForm.querySelectorAll(".lotto-game-input")[0];
+
+  setTimeout(() => {
+    firstInput?.focus();
+  }, 0);
+
   return $lottoGameForm;
 };
 

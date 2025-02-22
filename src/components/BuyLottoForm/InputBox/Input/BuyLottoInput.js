@@ -7,6 +7,7 @@ const $BuyLottoInput = () => {
     minLength: "4",
     maxLength: "6",
     inputMode: "numeric",
+    autofocus: true,
   });
 };
 
