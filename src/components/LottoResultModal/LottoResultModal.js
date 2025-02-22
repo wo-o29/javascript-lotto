@@ -1,12 +1,23 @@
 import $LottoResultModalBody from "./Body/LottoResultModalBody.js";
 import $LottoResultModalHeader from "./Header/LottoResultModalHeader.js";
 import $LottoResultFooter from "./Footer/LottoResultModalFooter.js";
+import initWebLottoGame from "../../lotto/initWebLottoGame.js";
 
-const handleLottoResultModalClose = (event) => {
-  console.log(event.target.closest(".modal-close-button"));
+const closeModal = () => {
+  const $modalBackground = document.querySelector(".modal-background");
+  $modalBackground.remove();
+};
+
+const handleLottoResultModalClick = (event) => {
   if (event.target.closest(".modal-close-button")) {
-    const $modalBackground = document.querySelector(".modal-background");
-    $modalBackground.remove();
+    closeModal();
+    return;
+  }
+
+  if (event.target.closest(".lotto-restart-button")) {
+    closeModal();
+    initWebLottoGame();
+    return;
   }
 };
 
@@ -32,7 +43,7 @@ const $LottoResultModal = (prizeResult, revenueRate) => {
 
   appContainer.appendChild($modalBackGround);
 
-  $modalBackGround.addEventListener("click", handleLottoResultModalClose);
+  $modalBackGround.addEventListener("click", handleLottoResultModalClick);
 };
 
 export default $LottoResultModal;
