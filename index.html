@@ -4,12 +4,45 @@
     <meta charset="UTF-8" />
     <title>🎱 행운의 로또</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div id="app">
-      <h1>🎱 행운의 로또</h1>
+      <header class="header">
+        <nav class="header-nav">
+          <h1><a href="/" class="header-title-link">🎱 행운의 로또</a></h1>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="lotto-game-box">
+          <h2 class="lotto-game-title">🎱 내 번호 당첨 확인 🎱</h2>
+
+          <form class="buy-lotto-form">
+            <label for="buy-lotto" class="buy-lotto-input-label"
+              >구입할 금액을 입력해주세요.</label
+            >
+            <p class="buy-lotto-input-box">
+              <input
+                type="text"
+                id="buy-lotto"
+                class="buy-lotto-input"
+                placeholder="구입 금액(최소 금액 1,000원, 최대 금액 100,000원)"
+                minlength="4"
+              />
+              <button type="submit" class="buy-lotto-submit-button" disabled>
+                구입
+              </button>
+            </p>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-text">Copyright 2023. woowacourse</p>
+      </footer>
     </div>
     <script type="module" src="./src/step2-index.js"></script>
   </body>
