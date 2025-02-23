@@ -1,5 +1,5 @@
 import $LottoGameTitle from "../components/LottoGameTitle/LottoGameTitle.js";
-import $BuyLottoForm from "../components/BuyLottoForm/ButLottoForm.js";
+import $BuyLottoForm from "../components/BuyLottoForm/BuyLottoForm.js";
 
 const initWebLottoGame = () => {
   const $lottoGameBox = document.querySelector(".lotto-game-box");
