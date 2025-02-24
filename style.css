@@ -122,6 +122,10 @@
   gap: 0.5rem;
 }
 
+.lotto-ticket-icon {
+  font-size: 1.5rem;
+}
+
 /* lotto game form(winning number, bonus number) */
 .lotto-game-input-container {
   display: flex;

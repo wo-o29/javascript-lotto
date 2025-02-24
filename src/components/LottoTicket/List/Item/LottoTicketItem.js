@@ -4,9 +4,9 @@ const $LottoTicketItem = (lottoNumbers) => {
   });
 
   $lottoTicketItem.appendChild(
-    createElement("img", {
-      src: "lotto-ticket.png",
-      alt: "로또 티켓",
+    createElement("span", {
+      class: "lotto-ticket-icon",
+      textContent: "🎟️",
     })
   );
   $lottoTicketItem.appendChild(
