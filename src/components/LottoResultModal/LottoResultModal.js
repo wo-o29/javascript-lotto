@@ -5,6 +5,11 @@ import initWebLottoGame from "../../lotto/initWebLottoGame.js";
 
 const closeModal = () => {
   const $modalBackground = document.querySelector(".modal-background");
+
+  if (!$modalBackground) {
+    throw new Error("모달이 존재하지 않습니다.");
+  }
+
   $modalBackground.remove();
 };
 
