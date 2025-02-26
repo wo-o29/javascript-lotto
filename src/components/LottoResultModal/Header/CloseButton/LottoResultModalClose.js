@@ -1,3 +1,5 @@
+import $CloseIcon from "../../../CloseIcon/index.js";
+
 const $LottoResultModalClose = () => {
   const $modalCloseBox = createElement("p", {
     class: "modal-close-box",
@@ -7,12 +9,7 @@ const $LottoResultModalClose = () => {
     type: "button",
   });
 
-  $modalCloseButton.appendChild(
-    createElement("img", {
-      src: "close.svg",
-      alt: "모달 닫기",
-    })
-  );
+  $modalCloseButton.appendChild($CloseIcon("black"));
   $modalCloseBox.appendChild($modalCloseButton);
 
   return $modalCloseBox;
