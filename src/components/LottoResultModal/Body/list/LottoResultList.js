@@ -4,7 +4,7 @@ import { LOTTO_PRIZE_MONEY } from "../../../../constants/lotto.js";
 
 const $LottoResultList = (prizeResult) => {
   const $lottoResultList = createElement("ul", {
-    className: "lotto-result-list",
+    class: "lotto-result-list",
   });
 
   $lottoResultList.appendChild($LottoResultItemHeader());

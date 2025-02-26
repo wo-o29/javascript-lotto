@@ -49,7 +49,7 @@ const handleBuyLottoFormSubmit = (event) => {
 
 const $BuyLottoForm = () => {
   const $buyLottoForm = createElement("form", {
-    className: "buy-lotto-form",
+    class: "buy-lotto-form",
   });
 
   $buyLottoForm.appendChild($BuyLottoLabel());

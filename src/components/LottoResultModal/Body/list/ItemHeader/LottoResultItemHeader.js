@@ -1,6 +1,6 @@
 const $LottoResultItemHeader = () => {
   const $lottoResultItemHeader = createElement("li", {
-    className: "lotto-result-item-header",
+    class: "lotto-result-item-header",
   });
 
   $lottoResultItemHeader.appendChild(

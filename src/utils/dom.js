@@ -12,7 +12,13 @@ export const createElement = (tag, props = {}) => {
     }
 
     if (key === "class") {
+      if (Array.isArray(value)) {
+        element.classList.add(...value);
+        return;
+      }
+
       element.classList.add(value);
+      return;
     }
 
     element[key] = value;

@@ -2,7 +2,7 @@ import $LottoResultList from "./list/LottoResultList.js";
 
 const $LottoResultModalBody = (prizeResult) => {
   const $lottoResultModalBody = createElement("div", {
-    className: "modal-body",
+    class: "modal-body",
   });
 
   $lottoResultModalBody.appendChild($LottoResultList(prizeResult));

@@ -1,6 +1,6 @@
 const $LottoResultItem = (matchKey, prizeMoney, matchCount) => {
   const $lottoResultItem = createElement("li", {
-    className: "lotto-result-item",
+    class: "lotto-result-item",
   });
 
   $lottoResultItem.appendChild(

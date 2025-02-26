@@ -1,6 +1,6 @@
 const $LottoResultModalTitle = () => {
   return createElement("h2", {
-    className: "modal-title",
+    class: "modal-title",
     textContent: "🏆 당첨 통계 🏆",
   });
 };

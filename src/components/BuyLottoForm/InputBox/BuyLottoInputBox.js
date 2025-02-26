@@ -3,7 +3,7 @@ import $BuyLottoSubmitButton from "./SubmitButton/BuyLottoSubmitButton.js";
 
 const $BuyLottoInputBox = () => {
   const $buyLottoInputBox = createElement("p", {
-    className: "buy-lotto-input-box",
+    class: "buy-lotto-input-box",
   });
 
   $buyLottoInputBox.appendChild($BuyLottoInput());

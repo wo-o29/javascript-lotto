@@ -28,10 +28,10 @@ const handleLottoResultModalClick = (event) => {
 
 const $LottoResultModal = (prizeResult, revenueRate) => {
   const $modalBackGround = createElement("div", {
-    className: "modal-background",
+    class: "modal-background",
   });
   const $modalBox = createElement("div", {
-    className: "modal-box",
+    class: "modal-box",
   });
 
   $modalBox.appendChild($LottoResultModalHeader());

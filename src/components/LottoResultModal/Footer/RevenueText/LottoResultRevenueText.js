@@ -1,6 +1,6 @@
 const $LottoResultRevenueText = (revenueRate) => {
   return createElement("p", {
-    className: "lotto-result-revenue-text",
+    class: "lotto-result-revenue-text",
     textContent: `당신의 총 수익률은 ${revenueRate.toLocaleString()}%입니다.`,
   });
 };
