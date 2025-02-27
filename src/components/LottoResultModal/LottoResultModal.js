@@ -2,6 +2,8 @@ import $LottoResultModalBody from "./Body/LottoResultModalBody.js";
 import $LottoResultModalHeader from "./Header/LottoResultModalHeader.js";
 import $LottoResultFooter from "./Footer/LottoResultModalFooter.js";
 import initWebLottoGame from "../../lotto/initWebLottoGame.js";
+import { setContext } from "../../lotto/lottoGameContext.js";
+import { LOTTO_CONTEXT } from "../../constants/lotto.js";
 
 const closeModal = () => {
   const $modalBackground = document.querySelector(".modal-background");
@@ -22,6 +24,7 @@ const handleLottoResultModalClick = (event) => {
   if (event.target.closest(".lotto-restart-button")) {
     closeModal();
     initWebLottoGame();
+    setContext(LOTTO_CONTEXT.isPurchased, (prev) => !prev);
     return;
   }
 };
