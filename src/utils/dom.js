@@ -37,3 +37,9 @@ export const createElement = (tag, props = {}) => {
 
   return element;
 };
+
+export const createElementsFragment = (elements) => {
+  const fragment = document.createDocumentFragment();
+  fragment.append(...elements);
+  return fragment;
+};
