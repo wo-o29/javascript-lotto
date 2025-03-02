@@ -4,19 +4,17 @@ const $LottoResultItem = (matchKey, prizeMoney, matchCount) => {
   });
 
   $lottoResultItem.appendChild(
-    createElement("span", {
-      textContent: matchKey === "5B" ? "5개 + 보너스볼" : `${matchKey}개`,
-    })
-  );
-  $lottoResultItem.appendChild(
-    createElement("span", {
-      textContent: prizeMoney.toLocaleString(),
-    })
-  );
-  $lottoResultItem.appendChild(
-    createElement("span", {
-      textContent: `${matchCount}개`,
-    })
+    createElementsFragment([
+      createElement("span", {
+        textContent: matchKey === "5B" ? "5개 + 보너스볼" : `${matchKey}개`,
+      }),
+      createElement("span", {
+        textContent: prizeMoney.toLocaleString(),
+      }),
+      createElement("span", {
+        textContent: `${matchCount}개`,
+      }),
+    ])
   );
 
   return $lottoResultItem;

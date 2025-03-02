@@ -6,8 +6,9 @@ const $LottoResultModalHeader = () => {
     class: "modal-header",
   });
 
-  $lottoResultModalHeader.appendChild($LottoResultModalClose());
-  $lottoResultModalHeader.appendChild($LottoResultModalTitle());
+  $lottoResultModalHeader.appendChild(
+    createElementsFragment([$LottoResultModalClose(), $LottoResultModalTitle()])
+  );
 
   return $lottoResultModalHeader;
 };

@@ -6,8 +6,9 @@ const $BuyLottoInputBox = () => {
     class: "buy-lotto-input-box",
   });
 
-  $buyLottoInputBox.appendChild($BuyLottoInput());
-  $buyLottoInputBox.appendChild($BuyLottoSubmitButton());
+  $buyLottoInputBox.appendChild(
+    createElementsFragment([$BuyLottoInput(), $BuyLottoSubmitButton()])
+  );
 
   return $buyLottoInputBox;
 };

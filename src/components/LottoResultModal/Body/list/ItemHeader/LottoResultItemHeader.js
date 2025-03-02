@@ -4,19 +4,17 @@ const $LottoResultItemHeader = () => {
   });
 
   $lottoResultItemHeader.appendChild(
-    createElement("span", {
-      textContent: "일치 갯수",
-    })
-  );
-  $lottoResultItemHeader.appendChild(
-    createElement("span", {
-      textContent: "당첨금",
-    })
-  );
-  $lottoResultItemHeader.appendChild(
-    createElement("span", {
-      textContent: "당첨 갯수",
-    })
+    createElementsFragment([
+      createElement("span", {
+        textContent: "일치 갯수",
+      }),
+      createElement("span", {
+        textContent: "당첨금",
+      }),
+      createElement("span", {
+        textContent: "당첨 갯수",
+      }),
+    ])
   );
 
   return $lottoResultItemHeader;

@@ -4,15 +4,15 @@ const $LottoTicketItem = (lottoNumbers) => {
   });
 
   $lottoTicketItem.appendChild(
-    createElement("span", {
-      class: "lotto-ticket-icon",
-      textContent: "🎟️",
-    })
-  );
-  $lottoTicketItem.appendChild(
-    createElement("span", {
-      textContent: lottoNumbers.join(", "),
-    })
+    createElementsFragment([
+      createElement("span", {
+        class: "lotto-ticket-icon",
+        textContent: "🎟️",
+      }),
+      createElement("span", {
+        textContent: lottoNumbers.join(", "),
+      }),
+    ])
   );
 
   return $lottoTicketItem;

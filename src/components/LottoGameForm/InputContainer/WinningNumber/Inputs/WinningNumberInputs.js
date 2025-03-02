@@ -6,10 +6,12 @@ const $WinningNumberInputs = () => {
     class: "winning-number-input-box",
   });
 
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < LOTTO_RULE.LOTTO_LENGTH; i++) {
-    $winningNumberInputs.appendChild($WinningNumberInput());
+    fragment.appendChild($WinningNumberInput());
   }
 
+  $winningNumberInputs.appendChild(fragment);
   return $winningNumberInputs;
 };
 

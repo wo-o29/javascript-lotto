@@ -26,6 +26,7 @@ const handleBuyLottoInputValueRange = (event) => {
 
 const handleBuyLottoFormSubmit = (event) => {
   event.preventDefault();
+
   if (getContext(LOTTO_CONTEXT.isPurchased)) {
     alert("이미 로또를 구매하셨습니다.");
     return;
@@ -39,8 +40,13 @@ const handleBuyLottoFormSubmit = (event) => {
     const lottoNumberSets = generateLottoNumberSets(lottoPrice);
 
     const $lottoGameBox = document.querySelector(".lotto-game-box");
-    $lottoGameBox.appendChild($LottoTicket(lottoNumberSets));
-    $lottoGameBox.appendChild($LottoGameForm(lottoPrice, lottoNumberSets));
+
+    $lottoGameBox.appendChild(
+      createElementsFragment([
+        $LottoTicket(lottoNumberSets),
+        $LottoGameForm(lottoPrice, lottoNumberSets),
+      ])
+    );
 
     const $buyLottoSubmitButton = document.querySelector(
       ".buy-lotto-submit-button"
@@ -59,8 +65,9 @@ const $BuyLottoForm = () => {
     class: "buy-lotto-form",
   });
 
-  $buyLottoForm.appendChild($BuyLottoLabel());
-  $buyLottoForm.appendChild($BuyLottoInputBox());
+  $buyLottoForm.appendChild(
+    createElementsFragment([$BuyLottoLabel(), $BuyLottoInputBox()])
+  );
 
   $buyLottoForm.addEventListener("input", handleBuyLottoInputValueRange);
   $buyLottoForm.addEventListener("submit", handleBuyLottoFormSubmit);

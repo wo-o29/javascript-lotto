@@ -37,9 +37,13 @@ const $LottoResultModal = (prizeResult, revenueRate) => {
     class: "modal-box",
   });
 
-  $modalBox.appendChild($LottoResultModalHeader());
-  $modalBox.appendChild($LottoResultModalBody(prizeResult));
-  $modalBox.appendChild($LottoResultFooter(revenueRate));
+  $modalBox.appendChild(
+    createElementsFragment([
+      $LottoResultModalHeader(),
+      $LottoResultModalBody(prizeResult),
+      $LottoResultFooter(revenueRate),
+    ])
+  );
 
   $modalBackGround.appendChild($modalBox);
 

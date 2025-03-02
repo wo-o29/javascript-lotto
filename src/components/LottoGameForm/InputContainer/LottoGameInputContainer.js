@@ -6,8 +6,9 @@ const $LottoGameInputContainer = () => {
     class: "lotto-game-input-container",
   });
 
-  $lottoGameInputContainer.appendChild($WinningNumberInputBox());
-  $lottoGameInputContainer.appendChild($BonusNumberInputBox());
+  $lottoGameInputContainer.appendChild(
+    createElementsFragment([$WinningNumberInputBox(), $BonusNumberInputBox()])
+  );
 
   return $lottoGameInputContainer;
 };

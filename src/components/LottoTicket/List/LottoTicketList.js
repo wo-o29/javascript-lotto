@@ -5,9 +5,12 @@ const $LottoTicketList = (lottoNumberSets) => {
     class: "lotto-ticket-list",
   });
 
+  const fragment = document.createDocumentFragment();
   lottoNumberSets.forEach((lottoNumbers) => {
-    $lottoTicketList.appendChild($LottoTicketItem(lottoNumbers));
+    fragment.appendChild($LottoTicketItem(lottoNumbers));
   });
+
+  $lottoTicketList.appendChild(fragment);
 
   return $lottoTicketList;
 };

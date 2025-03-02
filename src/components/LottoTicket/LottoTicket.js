@@ -6,8 +6,12 @@ const $LottoTicket = (lottoNumberSets) => {
     class: "lotto-ticket-box",
   });
 
-  $lottoTicketBox.appendChild($LottoTicketCountText(lottoNumberSets.length));
-  $lottoTicketBox.appendChild($LottoTicketList(lottoNumberSets));
+  $lottoTicketBox.appendChild(
+    createElementsFragment([
+      $LottoTicketCountText(lottoNumberSets.length),
+      $LottoTicketList(lottoNumberSets),
+    ])
+  );
 
   return $lottoTicketBox;
 };

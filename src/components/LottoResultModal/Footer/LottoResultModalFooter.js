@@ -4,8 +4,12 @@ import $LottoResultRevenueText from "./RevenueText/LottoResultRevenueText.js";
 const $LottoResultModalFooter = (revenueRate) => {
   const $lottoResultModalFooter = createElement("div");
 
-  $lottoResultModalFooter.appendChild($LottoResultRevenueText(revenueRate));
-  $lottoResultModalFooter.appendChild($LottoRestartButton());
+  $lottoResultModalFooter.appendChild(
+    createElementsFragment([
+      $LottoResultRevenueText(revenueRate),
+      $LottoRestartButton(),
+    ])
+  );
 
   return $lottoResultModalFooter;
 };

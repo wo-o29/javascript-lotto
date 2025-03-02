@@ -7,12 +7,16 @@ const $LottoResultList = (prizeResult) => {
     class: "lotto-result-list",
   });
 
-  $lottoResultList.appendChild($LottoResultItemHeader());
+  const fragment = document.createDocumentFragment();
+  fragment.appendChild($LottoResultItemHeader());
+
   Array.from(prizeResult).forEach(([matchKey, matchCount]) => {
-    $lottoResultList.appendChild(
+    fragment.appendChild(
       $LottoResultItem(matchKey, LOTTO_PRIZE_MONEY.get(matchKey), matchCount)
     );
   });
+
+  $lottoResultList.appendChild(fragment);
 
   return $lottoResultList;
 };
